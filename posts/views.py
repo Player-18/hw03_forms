@@ -23,6 +23,6 @@ def new_post(request):
             post.author = User.objects.get(username=request.user)
             post.save()
             return redirect('index')
-        return render(request, 'new.html', {'form':form})
+        return render(request, 'new.html', {'form': form})
     form = NewForm()
-    return render(request, 'new.html', {'form':form})
+    return render(request, 'new.html', {'form': form})
